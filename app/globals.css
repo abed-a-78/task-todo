@@ -1,33 +1,53 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  --primary-color: #304ffe;
+  --secondary-color: #eeeeee;
+  --text-color: #6b6b6b;
+  --radius-size: 10px;
+  --transition-time: 0.2s;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Inter, system-ui, Avenir, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin: auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  padding: 10px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+::-webkit-scrollbar {
+  width: 9px;
+  background-color: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+
+
+
+::-webkit-scrollbar-button {
+  background-color: #445199;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+input {
+  outline: none;
 }
